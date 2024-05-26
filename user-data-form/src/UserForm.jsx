@@ -6,10 +6,10 @@ const UserForm = () => {
 
     const [formData, setFormData ] = useState({
         name: '',
-        father_name: '',
+        fatherName: '',
         age: '',
         education: '',
-        phone_number: '',
+        phoneNumber: '',
         email: ''
     })
 
@@ -30,10 +30,10 @@ const UserForm = () => {
             alert('User Data Added to Database Successfully!');
             setFormData({
                 name: '',
-                father_name: '',
+                fatherName: '',
                 age: '',
                 education: '',
-                phone_number: '',
+                phoneNumber: '',
                 email: '' 
             });
         })
@@ -45,33 +45,44 @@ const UserForm = () => {
     return (
         <form onSubmit={handleSubmit}>
             <div>
-                <label>Name:</label>
-                <input type="text" name='name' value={formData.name} onChange={handleChange} required />
+                <label>
+                    Name:
+                    <input type="text" name="name" value={formData.name} onChange={handleChange} required />
+                </label>
             </div>
             <div>
-                <label>Father Name:</label>
-                <input type="text" name='fatherName' value={formData.father_name} onChange={handleChange} required />
+                <label>
+                    Father Name:
+                    <input type="text" name="fatherName" value={formData.fatherName} onChange={handleChange} required />
+                </label>
             </div>
             <div>
-                <label>Age:</label>
-                <input type="number" name='age' value={formData.age} onChange={handleChange} required />
+                <label>
+                    Age:
+                    <input type="number" name="age" value={formData.age} onChange={handleChange} required />
+                </label>
             </div>
             <div>
-                <label>Education:</label>
-                <input type="text" name='education' value={formData.education} onChange={handleChange} required />
+                <label>
+                    Education:
+                    <input type="text" name="education" value={formData.education} onChange={handleChange} required />
+                </label>
             </div>
             <div>
-                <label>Phone Number:</label>
-                <input type="number" name='phoneNumber' value={formData.phone_number} onChange={handleChange} required />
+                <label>
+                    Phone Number:
+                    <input type="text" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} required />
+                </label>
             </div>
             <div>
-                <label>Email:</label>
-                <input type="email" name='email' value={formData.email} onChange={handleChange} required />
+                <label>
+                    Email:
+                    <input type="email" name="email" value={formData.email} onChange={handleChange} required />
+                </label>
             </div>
-            <button type="submit" >Submit</button>
+            <button type="submit">Submit</button>
         </form>
-    )
+    );
 }
-
 
 export default UserForm;
